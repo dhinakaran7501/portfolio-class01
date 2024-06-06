@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Reset Css */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
 
 
 /* Custom css */
-body{
+body {
   background-color: #0f1319;
 }
 
-#navbar{
+#navbar {
   color: #fff;
   /* padding: 30px; */
   /* single-value=> top-right-bottom-left=> 30px */
@@ -31,68 +32,84 @@ body{
   border-bottom: 1px solid #ffff;
 }
 
-#navbar a{
+#navbar a {
   color: #fff;
 }
 
-#navbar .container{
+.container {
   width: 80%;
   margin: 0px auto;
 }
 
-.navbar-wrapper{
+.navbar-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.items{
+.items {
   display: flex;
   gap: 30px;
 }
 
-#home-Section{
+#home-Section {
   color: #fff;
 }
 
-#home-Section .container{
-  width: 60%;
+/* #home-Section .container {
+  width: 80%;
   margin: 0px auto;
-}
+} */
 
-.header-wrapper{
+.header-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 90vh;
 }
 
-.content-section p:nth-child(1){
+.content-section {
+  width: 50%;
+}
+
+.content-section p:nth-child(1) {
   font-size: 35px;
 }
 
-.content-section .diff-color{
+.content-section .diff-color {
   color: #fd005b;
 }
-.content-section h1{
+
+.content-section h1 {
   font-size: 40px;
   line-height: 70px;
 }
-.content-section h6{
+
+.content-section h6 {
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 52px;
 }
-.content-section p{
+
+.content-section p {
   font-size: 18px;
 }
 
-.image-section img{
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
+.image-section {
+  width: 50%;
 }
 
-#home-Section button{
+.image-section img {
+  /* width: 400px;
+  height: 400px; */
+  /* border-radius: 50%; */
+  width: 100%;
+}
+
+#home-Section {
+  border-bottom: 1px solid #fff;
+}
+
+#home-Section button {
   margin-top: 20px;
   padding: 10px 30px;
   border-radius: 10px;
@@ -105,7 +122,154 @@ body{
   cursor: pointer;
 }
 
-#home-Section button:hover{
+#home-Section button:hover {
   background-color: orange;
   color: #000;
+}
+
+#education-section {
+  /* padding-top: 10px; */
+  color: #fff;
+}
+
+#education-section>h1 {
+  padding: 20px 0px;
+  text-align: center;
+  font-size: 25px;
+  color: #ffc107;
+}
+
+.edu-list-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.studies-details {
+  border: 1px solid #fff;
+  width: 32%;
+  padding: 30px;
+
+}
+
+.studies-details h4 {
+  font-size: 23px;
+  color: orangered;
+  text-align: center;
+  border-bottom: 1px dotted #fff;
+}
+
+.studies-details p:nth-child(2) {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.studies-details p:nth-child(3) {
+  text-align: end;
+  color: yellowgreen;
+  padding-bottom: 10px;
+}
+
+.studies-details>div {
+  border-top: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.studies-details>div>span:nth-child(1) {
+  border: 1px dashed #fff;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+}
+
+.studies-details>div>span:nth-child(2) {
+  border: 1px dashed #fff;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  font-weight: 600;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .navbar-wrapper {
+    flex-direction: column;
+  }
+
+  .navbar-wrapper>h4 {
+    text-align: center;
+  }
+
+  .navbar-wrapper .items {
+    font-size: 12px;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .header-wrapper .content-section {
+    margin-top: 15px;
+    width: 90%;
+  }
+
+  .header-wrapper .content-section>p:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .header-wrapper .content-section>h1:nth-child(2) {
+    font-size: 26px;
+  }
+
+  .header-wrapper .image-section {
+    margin: 15px 0;
+    width: 90%;
+  }
+
+  .edu-list-wrapper {
+    flex-direction: column;
+  }
+
+  .studies-details {
+    width: 90%;
+  }
+
+  .studies-details>div {
+    flex-wrap: wrap;
+  }
+
+  .studies-details>div>span:nth-child(1),
+  .studies-details>div>span:nth-child(2) {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+  .container {
+    width: 90%;
+  }
+
+  .studies-details {
+    width: 48%;
+    height: 267px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
